@@ -24,16 +24,42 @@ export const ShoppingPage = () => {
           flexWrap: 'wrap',
         }}
       >
-        <ProductCard product={product}  className='bg-dark'>
-          <ProductCard.Image />
-          <ProductCard.Title title='hola mundo' />
-          <ProductCard.Buttons />
+        <ProductCard product={product} className='bg-dark'>
+          <ProductCard.Image className='custom-image' />
+          <ProductCard.Title
+            title='hola mundo'
+            className='text-white text-bold'
+          />
+          <ProductCard.Buttons className='custom-buttons' />
         </ProductCard>
 
         <ProductCard product={product}>
-          <ProductImage />
+          <ProductImage
+            style={{
+              boxShadow: '10px 10px 10px rgba(0,0,0,0.2)',
+            }}
+          />
           <ProductTitle />
           <ProductButtons />
+        </ProductCard>
+
+        <ProductCard product={product} style={{ backgroundColor: '#70D1F8' }}>
+          <ProductImage
+            style={{
+              boxShadow: '10px 10px 10px rgba(0,0,0,0.2)',
+            }}
+          />
+          <ProductTitle
+            style={{
+              fontWeight: 'bold',
+            }}
+          />
+          <ProductButtons
+            style={{
+              display: 'flex',
+              justifyContent: 'end',
+            }}
+          />
         </ProductCard>
       </div>
     </div>
