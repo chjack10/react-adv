@@ -5,6 +5,7 @@ import {
   Route,
   Routes,
 } from 'react-router-dom';
+
 import { ShoppingPage } from '../02-components-patterns/pages/ShoppingPage';
 
 import logo from '../logo.svg';
@@ -21,6 +22,22 @@ export const Navigation = () => (
               className={({ isActive }) => (isActive ? 'nav-active' : '')}
             >
               Shopping
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to='/about'
+              className={({ isActive }) => (isActive ? 'nav-active' : '')}
+            >
+              About
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to='/users'
+              className={({ isActive }) => (isActive ? 'nav-active' : '')}
+            >
+              Users
             </NavLink>
           </li>
         </ul>
